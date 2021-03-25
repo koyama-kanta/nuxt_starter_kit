@@ -1,0 +1,11 @@
+.u-pc {
+  @include sp {
+    display: none !important;
+  }
+}
+
+.u-sp {
+  @include pc {
+    display: none !important;
+  }
+}

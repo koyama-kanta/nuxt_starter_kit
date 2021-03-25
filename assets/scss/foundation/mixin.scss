@@ -1,0 +1,27 @@
+// PCビュー用メディアクエリ
+@mixin pc() {
+  @media screen and (min-width: $breakpoint + 1) {
+    @content;
+  }
+}
+
+// SPビュー用メディアクエリ
+@mixin sp() {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// ランドスケープビュー用メディアクエリ
+@mixin landscape() {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
+// ポートレートビュー用メディアクエリ
+@mixin portrait() {
+  @media (orientation: portrait) {
+    @content;
+  }
+}

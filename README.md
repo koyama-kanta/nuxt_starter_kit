@@ -1,0 +1,2 @@
+# nuxt_starter_kit
+nuxtベースの簡易的なスターターキット

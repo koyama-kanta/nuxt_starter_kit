@@ -21,14 +21,3 @@ jobs:
 
       - name: Generate Static Project
         run: npm run generate
-
-      - name: FTP Deploy Action
-        if: ${{ secrets.FTP_SERVER && secrets.FTP_USERNAME && secrets.FTP_PASSWORD }}
-        uses: SamKirkland/FTP-Deploy-Action@2.0.0
-        env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          LOCAL_DIR: dist
-          REMOTE_DIR: www/nuxt_starter_kit/demo
-          ARGS: --delete
